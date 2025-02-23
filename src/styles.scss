@@ -132,7 +132,7 @@ $_palettes: (
 $_rest: (
   secondary: map.get($_palettes, secondary),
   neutral: map.get($_palettes, neutral),
-  neutral-variant: map.get($_palettes,  neutral-variant),
+  neutral-variant: map.get($_palettes, neutral-variant),
   error: map.get($_palettes, error),
 );
 $_primary: map.merge(map.get($_palettes, primary), $_rest);
@@ -278,7 +278,7 @@ body.dark-theme {
 
 html {
   // Apply the light theme by default
-  @include mat.all-component-themes($light-theme  );
+  @include mat.all-component-themes($light-theme);
   @include mat.core-theme($light-theme);
   @include mat.button-theme(m3-theme.$light-theme);
 }
@@ -288,7 +288,16 @@ body {
   background-image: url('https://images.unsplash.com/photo-1542435503-956c469947f6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVza3RvcHxlbnwwfHwwfHx8MA%3D%3D');
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
 }
-body { margin: 0; font-family: "Lexend", sans-serif; }
-p {margin: 0}
-input {font-family: "Lexend", sans-serif; margin: 0; padding: 0}
+
+p {
+  margin: 0
+}
+
+input {
+  font-family: "Lexend", sans-serif;
+  margin: 0;
+  padding: 0
+}
