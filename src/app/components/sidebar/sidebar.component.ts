@@ -13,17 +13,18 @@ export class SidebarComponent {
   boards = [
     {
       name: 'Work',
-      background: '../../../assets/images/background1.jpg',
+      background: 'https://images.unsplash.com/photo-1542435503-956c469947f6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVza3RvcHxlbnwwfHwwfHx8MA%3D%3D',
     },
     {
       name: 'Personal',
-      background: 'url(https://t3.ftcdn.net/jpg/05/13/59/72/360_F_513597277_YYqrogAmgRR9ohwTUnOM784zS9eYUcSk.jpg)',
+      background: 'https://media.istockphoto.com/id/1285308242/photo/to-do-list-text-on-notepad.jpg?s=612x612&w=0&k=20&c=p85bCVQZwvkrqqqNOJGg2QuPDu6ynTlQHkASQOTELh8=',
     },
   ];
 
-  @ViewChild(MatSidenav) sidenav!: MatSidenav;
-
-  toggleSidebar() {
-    this.sidenav.toggle();
-  }
+  invitedBoards = [
+    {
+      name: 'Trip to Japan',
+      background: 'https://t3.ftcdn.net/jpg/05/13/59/72/360_F_513597277_YYqrogAmgRR9ohwTUnOM784zS9eYUcSk.jpg',
+    },
+  ];
 }

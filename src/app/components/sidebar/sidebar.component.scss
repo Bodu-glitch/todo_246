@@ -1,9 +1,13 @@
+* {
+  user-select: none;
+}
+
 mat-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  color: #888;
+  color: var(--md-sys-color-shadow);
   margin-bottom: 2px;
 }
 
@@ -15,12 +19,15 @@ mat-list {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 250px;
-  background-color: rgba(0, 0, 0, 0.03);
+  width: 260px;
+  //background-color: rgba(1, 1, 1, 0.24);
+  //backdrop-filter: blur(10px);
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
 }
 
 mat-drawer {
-  width: 250px;
+  width: 260px;
   //background: #f5f7f9;
   padding: 12px;
   border: none;
@@ -43,6 +50,7 @@ mat-drawer {
   text-align: center;
   display: flex;
   gap: 8px;
+  margin-bottom: 8px;
 
   img {
     width: 40px;
@@ -64,7 +72,7 @@ mat-drawer {
 
     span {
       font-size: 12px;
-      color: gray;
+      color: var(--md-sys-color-shadow);
     }
   }
 }
@@ -73,6 +81,10 @@ mat-list-item {
   cursor: pointer;
   padding: 10px 8px;
   border-radius: 8px;
+
+  &:hover {
+    background-color: var(--md-sys-color-surface-container-high);
+  }
 
   .background {
     border-radius: 4px;
@@ -84,7 +96,7 @@ mat-list-item {
   ::ng-deep.mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 45px;
   }
 
   mat-icon {
@@ -100,14 +112,29 @@ mat-list-item {
 .section-title {
   font-size: 14px;
   font-weight: bold;
-  margin: 16px 0 0 0;
-  color: gray;
+  margin: 8px 0 0 0;
+  color: var(--md-sys-color-shadow);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  .add-board-btn:hover {
-    cursor: pointer;
-    color: black;
+  .add-board-btn {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--md-sys-color-surface-container-high);
+      border-radius: 4px;
+    }
+
+    &:active {
+      background-color: var(--md-sys-color-surface-container-highest);
+      transition-duration: 225ms;
+      transform: scale3d(1, 1, 1);
+    }
   }
 }
 
