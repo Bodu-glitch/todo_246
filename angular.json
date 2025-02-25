@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "taskly_frontend": {
+    "kanban-246": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -99,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
